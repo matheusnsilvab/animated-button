@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(0, 166, 255);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 50px;
+  font-weight: bold;
+  border: 1px solid #000;
+  /* Cria a "borda" 3D embaixo do botão */
+  box-shadow: 0 6px 0 #1a1717;
+  /* Deixa a animação suave */
+  transition: all 0.05s ease;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f415cf;
+}
+
+/* Classe que o JS coloca para dar o efeito de afundado */
+.afundado {
+  /* Move o botão para baixo exatamente o tamanho da sombra */
+  transform: translateY(6px);
+  /* Zera a sombra, fazendo parecer que ele encostou no fundo */
+  box-shadow: 0 0 0 #2980b9;
+}
+
+/* Quando a tela tiver no máximo 600px de largura (celulares) */
+@media (max-width: 600px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 20px;
+    width: 90%; /* Deixa o botão mais largo para caber melhor no celular */
+  }
+}
